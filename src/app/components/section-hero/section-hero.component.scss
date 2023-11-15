@@ -1,0 +1,36 @@
+.section--hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  gap: 30px;
+  height: 100vh;
+  padding-top: 80px;
+
+  background-image: radial-gradient(rgba(0, 0, 0, 0.7) 30%, transparent), url("../../../assets/images/bg-hero.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: var(--noda-white);
+
+  p {
+    color: #DDE3E9;
+    font-family: 'Archivo', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: -0.04px;
+  }
+
+  a {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    gap: 0.5em;
+
+    span {
+      padding-top: 0.2em;
+    }
+  }
+}

@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@import './reset.scss';
+
+:root {
+  --noda-white: #FFFFFF;
+  --noda-plum: #6936D3;
+
+  --noda-color-elements-primary: #6936D3;
+  --noda-color-additional-primary-light: #947AFF;
+
+  --noda-color-elements-500: #A3A7BD;
+  --noda-color-elements-300: #C9CCD8;
+
+  --noda-color-bg-100: #F7F9FC;
+
+  --old-neutral-1000: #171B2C;
+  --old-neutral-200: #E8EAF3;
+
+  --dark-gradient: linear-gradient(90deg, #aa82ff 3.2%, #eb6c73 116%)
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Inter', sans-serif;
+}
+
+app-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+h1 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+h2 {
+  color: #1B263F;
+  font-family: 'Archivo', sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+
+button {
+  cursor: pointer;
+}
+
+.btn {
+  display: inline-block;
+  color: var(--noda-white);
+  text-align: center;
+  font-family: 'Archivo', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+  padding: 16px 24px;
+  border-radius: 4px;
+}
+
+.btn--primary {
+  background-color: var(--noda-plum);
+}

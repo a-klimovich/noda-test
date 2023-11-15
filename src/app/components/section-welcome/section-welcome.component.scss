@@ -1,0 +1,11 @@
+.section--welcome {
+  padding: 100px 0;
+
+  .form-wrapper {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+    }
+  }
+}
