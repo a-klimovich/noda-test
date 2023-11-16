@@ -1,11 +1,11 @@
-<section class="section section--welcome">
-  <h2>Welcome to Noda Payment Links</h2>
+<section class="section section--welcome welcome">
+  <h2 class="title">Welcome to Noda Payment Links</h2>
 
-  <div class="welcome-block">
-    <div>
-      <p>Where we harness the power of AI to revolutionize the way creating payment pages</p>
+  <div class="block">
+    <div class="block__content">
+      <p class="subtitle">Where we harness the power of AI to revolutionize the way creating payment pages</p>
 
-      <p>
+      <p class="text">
         Our advanced platform combines the capabilities of <b>ChatGPT</b> for generating detailed text descriptions
         and
         <b>MidJourney</b> for selecting suitable images. With our innovative solution, you can effortlessly design and
@@ -14,12 +14,19 @@
       </p>
     </div>
 
-    <div class="form-wrapper">
-      <form action="#">
-        <input type="email" placeholder="placeholder">
+    <div class="block__form">
+      <form [formGroup]="form" class="form" action="#">
+        <div class="input-group">
+          <div>Select your business type</div>
 
-        <input type="tel" placeholder="placeholder">
-        <!-- <app-custom-checkbox></app-custom-checkbox> -->
+          <input type="email" placeholder="E-mail" required>
+
+          <input type="tel" placeholder="Phone number" required>
+        </div>
+
+        <app-custom-checkbox formControlName="myFormControl">
+          Checkbox label
+        </app-custom-checkbox>
 
         <button class="btn btn--primary">Start using Noda Payment links</button>
       </form>

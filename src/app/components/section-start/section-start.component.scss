@@ -1,5 +1,27 @@
-.section--lets-start {
+.section--start {
   overflow: hidden;
   padding: 100px 0;
-  background: #29304D;
+  background: #29304d;
+
+  .block {
+    display: flex;
+    gap: 40px;
+    color: var(--noda-white);
+
+    &__content {
+      max-width: 455px;
+    }
+
+    &__title {
+      color: var(--noda-white);
+    }
+
+    &__text {
+      margin-top: 8px;
+    }
+
+    &__link {
+      margin-top: 40px;
+    }
+  }
 }

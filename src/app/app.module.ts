@@ -1,14 +1,35 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormControlsModule } from './core/modules/form-controls.module'
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { SectionHeroComponent } from './components/section-hero/section-hero.component';
+import { SectionWelcomeComponent } from './components/section-welcome/section-welcome.component';
+import { SectionStartComponent } from './components/section-start/section-start.component';
 
 @NgModule({
-  imports: [BrowserModule, CommonModule, FormsModule],
-  declarations: [AppComponent],
+  imports: [
+    BrowserModule,
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    FormControlsModule
+  ],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    SectionHeroComponent,
+    SectionWelcomeComponent,
+    SectionStartComponent
+  ],
   providers: [],
-  bootstrap: [AppComponent],
+  bootstrap: [
+    AppComponent,
+  ],
 })
 export class AppModule {}

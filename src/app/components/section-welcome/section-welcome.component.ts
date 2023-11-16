@@ -1,13 +1,20 @@
 import { Component } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { FormControl, FormBuilder } from "@angular/forms";
 
 @Component({
   selector: 'app-section-welcome',
-  standalone: true,
-  imports: [CommonModule],
   templateUrl: './section-welcome.component.html',
   styleUrl: './section-welcome.component.scss'
 })
 export class SectionWelcomeComponent {
+  inputOne = true;
+  inputTwo = new FormControl(true);
 
+  form;
+
+  constructor(private formBuilder: FormBuilder) {
+    this.form = this.formBuilder.group({
+      myFormControl: true
+    });
+  }
 }
