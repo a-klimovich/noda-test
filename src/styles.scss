@@ -43,7 +43,7 @@ main {
 
 h1 {
   font-family: 'Archivo', sans-serif;
-  font-size: 58px;
+  font-size: clamp(2.2rem, 58px, 6vw);
   font-weight: 700;
   line-height: 120%;
 }
@@ -51,7 +51,7 @@ h1 {
 h2 {
   color: #1B263F;
   font-family: 'Archivo', sans-serif;
-  font-size: 48px;
+  font-size: clamp(2rem, 48px, 6vw);
   font-style: normal;
   font-weight: 700;
   line-height: 120%;

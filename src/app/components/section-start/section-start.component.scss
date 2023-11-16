@@ -4,12 +4,13 @@
   background: #29304d;
 
   .block {
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
     gap: 40px;
     color: var(--noda-white);
 
     &__content {
-      max-width: 455px;
+
     }
 
     &__title {
@@ -22,6 +23,10 @@
 
     &__link {
       margin-top: 40px;
+    }
+
+    .carousel {
+
     }
   }
 }

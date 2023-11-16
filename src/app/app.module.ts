@@ -1,8 +1,8 @@
-import { NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormControlsModule } from './core/modules/form-controls.module'
+import { FormControlsModule } from './core/modules/form-controls.module';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
@@ -11,13 +11,18 @@ import { SectionHeroComponent } from './components/section-hero/section-hero.com
 import { SectionWelcomeComponent } from './components/section-welcome/section-welcome.component';
 import { SectionStartComponent } from './components/section-start/section-start.component';
 
+import { register } from 'swiper/element/bundle';
+import { SwiperComponent } from './components/swiper/swiper.component';
+
+register();
+
 @NgModule({
   imports: [
     BrowserModule,
     CommonModule,
     FormsModule,
     ReactiveFormsModule,
-    FormControlsModule
+    FormControlsModule,
   ],
   declarations: [
     AppComponent,
@@ -25,11 +30,11 @@ import { SectionStartComponent } from './components/section-start/section-start.
     FooterComponent,
     SectionHeroComponent,
     SectionWelcomeComponent,
-    SectionStartComponent
+    SectionStartComponent,
+    SwiperComponent,
   ],
   providers: [],
-  bootstrap: [
-    AppComponent,
-  ],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}
