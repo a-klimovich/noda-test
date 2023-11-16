@@ -1,13 +1,130 @@
+@import '../../../mixins';
+
 .footer {
-  display: flex;
-  justify-content: space-around;
-  padding: 100px 0;
+  padding: 30px 0;
   background: #29304D;
   color: var(--noda-white);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 153%;
+  letter-spacing: -0.14px;
+
+  @include md {
+    padding: 50px 0;
+  }
+  @include lg {
+    padding: 100px 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    @include rwd(638) {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    @include md {
+      justify-content: space-between;
+    }
+  }
 
   &__logo {
     display: flex;
     align-items: center;
+    place-content: center;
     gap: 9.333px;
+    flex: 1 1 100%;
+
+    svg:nth-child(1) {
+      width: 40px;
+      height: 40px;
+    }
+
+    svg:nth-child(2) {
+      width: 80px;
+      height: 30px;
+    }
+
+    @include md {
+      align-items: flex-start;
+      flex: initial;
+
+      svg:nth-child(1),
+      svg:nth-child(2) {
+        width: initial;
+        height: initial;
+      }
+    }
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+
+    @include md {
+      row-gap: 16px;
+    }
+
+    &__title {
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 173.5%;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      row-gap: 8px;
+
+      @include md {
+        row-gap: 12px;
+      }
+    }
+
+    &__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+
+      &:hover {
+        background: var(--dark-gradient);
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  .contacts {
+    &__title {
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 173.5%;
+    }
+
+    &__link {
+      display: inline-flex;
+      justify-content: center;
+      padding: 8px 16px;
+      border-radius: 2px;
+      border: 1px solid rgba(255, 255, 255, 0.50);
+      font-size: 12px;
+      width: 141px;
+    }
+  }
+
+  .social {
+    margin-top: 16px;
+
+    &__item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
   }
 }

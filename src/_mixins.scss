@@ -1,0 +1,33 @@
+$media-trigger-lg: 1199.9;
+$media-trigger-md: 767.9;
+
+@mixin md {
+  @media (min-width: ($media-trigger-md + 'px')) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: ($media-trigger-lg + 'px')) {
+    @content;
+  }
+}
+
+// Custom devices
+@mixin rwd($screen) {
+  @media (min-width: ($screen + 'px')) {
+    @content;
+  }
+}
+
+@mixin clampLine($visibleLineNumber) {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-box;
+  -moz-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $visibleLineNumber;
+  -webkit-box-orient: vertical;
+  line-clamp: $visibleLineNumber;
+  box-orient: vertical;
+}
