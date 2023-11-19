@@ -15,6 +15,7 @@ import { SwiperDirective } from './directives/swiper.directive';
 
 import { register } from 'swiper/element/bundle';
 import { MegamenuProductsComponent } from './components/header/megamenu-products/megamenu-products.component';
+import { SectionLinkComponent } from './components/shared/section-link/section-link.component';
 
 // SWIPER
 register();
@@ -31,6 +32,7 @@ register();
     AppComponent,
     HeaderComponent,
     MegamenuProductsComponent,
+    SectionLinkComponent,
     FooterComponent,
     SectionHeroComponent,
     SectionWelcomeComponent,

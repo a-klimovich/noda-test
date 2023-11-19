@@ -10,8 +10,9 @@ export class InputComponent {
   @Input() name: string = 'input';
   @Input() errorMessage: string = '';
   @Input() disabled: boolean = false;
+  @Input() defaultValue: string = ''
 
-  value: string = '';
+  value: string = this.defaultValue;
 
   isFocused: boolean = false;
   hasError: boolean = false;

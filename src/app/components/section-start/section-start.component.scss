@@ -1,18 +1,27 @@
 @import "../../../mixins.scss";
 
 .section--start {
-  padding: 100px 0;
   background: #29304d;
-  overflow-x: hidden;
+  padding: 60px 0;
+
+  @include lg {
+    padding: 100px 0;
+  }
 
   .block {
     $gap: 15px;
     $contentPadding: 20px;
 
     display: flex;
-    height: 400px;
-    padding-left: 20px;
+    flex-direction: column;
+    height: 100%;
     color: var(--noda-white);
+
+    @include md {
+      $gap: 30px;
+      flex-direction: row;
+      height: 400px;
+    }
 
     @include lg {
       $gap: 40px;
@@ -23,13 +32,14 @@
     $contentSize: clamp(320px, calc(455px + $gap + $contentPadding), 50%);
     
     &__content {
-      flex-shrink: 1;
       box-sizing: border-box;
-    }
+      padding-left: 20px;
+      padding-right: 20px;
 
-    &__carousel {
-      flex-grow: 1;
-      width: calc(100% - $contentSize + $gap);
+      @include md {
+        padding-right: 0;
+        flex-shrink: 1;
+      }
     }
 
     &__title {
@@ -42,10 +52,17 @@
       line-height: 140%;
 
       margin-top: 8px;
+      margin-bottom: 40px;
     }
 
-    &__link {
-      margin-top: 40px;
+    &__carousel {
+      height: 347px;
+
+      @include md {
+        height: auto;
+        flex-grow: 1;
+        width: calc(100% - $contentSize + $gap);
+      }
     }
   }
 }

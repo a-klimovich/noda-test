@@ -53,6 +53,10 @@
       line-height: 120%;
     }
   }
+
+  &.active {
+    border-color: var(--noda-color-text-link-primary);
+  }
 }
 
 .custom-input-container .error {

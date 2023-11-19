@@ -1,0 +1,12 @@
+.section-link {
+  display: inline-flex;
+  align-items: center;
+  align-self: center;
+  gap: 0.5em;
+
+  span {
+    padding-top: 0.2em;
+    font-size: xx-large;
+    line-height: inherit;
+  }
+}

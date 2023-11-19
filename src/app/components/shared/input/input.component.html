@@ -1,17 +1,25 @@
 <div class="custom-input-container">
-  <div
+  <label
     class="custom-input"
-
     [class.error]="hasError"
     [class.disabled]="disabled"
     [class.filled]="isFocused || value.length > 0"
+    [class.active]="isFocused"
   >
     <div class="custom-input__label">
       {{ label }}
     </div>
 
-    <input [name]="name" (change)="onChange($event)" class="custom-input__input" (focus)="onFocus()" (blur)="onBlur()">
-  </div>
+    <input
+      [name]="name"
+      [value]="value"
+      (change)="onChange($event)"
+      [disabled]="disabled"
+      class="custom-input__input"
+      (focus)="onFocus()"
+      (blur)="onBlur()"
+    >
+  </label>
 
   <div class="custom-input__error-message" *ngIf="hasError">
     {{ errorMessage }}
