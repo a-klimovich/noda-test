@@ -1,12 +1,6 @@
 <div class="custom-select-container">
-  <div
-    (click)="toggleDropdown()"
-    class="custom-select"
-    [class.open]="isDropdownOpen"
-    [class.error]="hasError"
-    [class.disabled]="disabled"
-    [class.filled]="selectedOption.value"
-  >
+  <div class="custom-select" [class.open]="isDropdownOpen" [class.error]="hasError" [class.disabled]="disabled"
+    [class.filled]="selectedOption.value" (click)="toggleDropdown()">
     <div class="custom-select__label">
       {{ label }}
     </div>
@@ -15,11 +9,21 @@
       {{ selectedOption.label }}
     </div>
 
+    <svg class="custom-select__svg-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <mask id="mask0_1_14060" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+        <path
+          d="M12.1492 15.0384L6.49536 9.38464L7.54919 8.33081L12.1492 12.9308L16.7492 8.33081L17.803 9.38464L12.1492 15.0384Z"
+          fill="currentColor"
+        />
+      </mask>
+      <g mask="url(#mask0_1_14060)">
+        <rect class="arrow" width="24" height="24" fill="currentColor" />
+      </g>
+    </svg>
+
     <div class="custom-select__dropdown" *ngIf="isDropdownOpen">
-      <div *ngFor="let option of options" (click)="selectOption(option)"
-        class="custom-select__option"
-        [class.selected]="option.value === selectedOption.value"
-      >
+      <div *ngFor="let option of options" (click)="selectOption(option)" class="custom-select__option"
+        [class.selected]="option.value === selectedOption.value">
         {{ option.label }}
       </div>
     </div>

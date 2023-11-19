@@ -10,7 +10,7 @@ export class SelectComponent {
   @Input() label: string = 'Select';
   @Input() options: SelectOption[] = [];
   @Input() errorMessage: string = '';
-  @Input() disabled: boolean = false;
+  @Input() disabled: boolean = true;
   
   selectedOption: SelectOption = {
     label: '',

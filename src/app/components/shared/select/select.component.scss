@@ -1,4 +1,4 @@
-@import '../../../../styles.scss';
+@import "../../../../styles.scss";
 
 .custom-select-container {
   position: relative;
@@ -29,6 +29,13 @@
   &__label {
     transition: font-size 0.276s;
     color: var(--noda-color-text-500);
+  }
+
+  &__svg-arrow {
+    position: absolute;
+    top: 50%;
+    right: 14px;
+    transform: translateY(-50%);
   }
 
   &__selected-value {
@@ -77,6 +84,10 @@
     .custom-select__dropdown {
       display: block;
     }
+
+    .custom-select__svg-arrow {
+      color: var(--noda-color-elements-primary);
+    }
   }
 
   &.filled {
@@ -93,8 +104,14 @@
 .custom-select-container .error {
   border: 1px solid var(--noda-color-elements-rose);
 
-  &.filled .custom-select__label {
-    color: var(--noda-color-elements-rose);
+  &.filled {
+    .custom-select__label {
+      color: var(--noda-color-elements-rose);
+    }
+  }
+
+  .custom-select__svg-arrow {
+    color: var(--noda-color-text-500);
   }
 }
 
@@ -103,12 +120,17 @@
   background-color: var(--noda-color-bg-100);
   cursor: no-drop;
 
-  &.filled .custom-select__label {
-    color: var(--noda-color-text-500);
+  &.filled {
+    .custom-select__label {
+      color: var(--noda-color-text-500);
+    }
+    .custom-select__selected-value {
+      color: var(--noda-color-text-700);
+    }
   }
 
-  &.filled .custom-select__selected-value {
-    color: var(--noda-color-text-700);
+  .custom-select__svg-arrow {
+    color: var(--noda-color-text-500);
   }
 }
 
