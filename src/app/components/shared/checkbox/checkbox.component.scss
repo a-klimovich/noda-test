@@ -22,17 +22,17 @@
     svg {
       color: var(--noda-color-elements-500);
     }
-
-    .check-mark {
-      display: none;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 
-  &--active {
+  .check-mark {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.active {
     .check-mark {
       display: initial;
     }
@@ -48,7 +48,7 @@
     }
   }
 
-  &--disabled {
+  &.disabled {
     color: var(--noda-color-elements-300);
 
     &:hover {
@@ -63,7 +63,7 @@
       fill: var(--noda-color-bg-100);
     }
 
-    &.custom-checkbox--active {
+    &.active {
       .check-mark {
         display: initial;
 

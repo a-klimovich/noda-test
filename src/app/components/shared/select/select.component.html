@@ -1,1 +1,31 @@
-<p>select works!</p>
+<div class="custom-select-container">
+  <div
+    (click)="toggleDropdown()"
+    class="custom-select"
+    [class.open]="isDropdownOpen"
+    [class.error]="hasError"
+    [class.disabled]="disabled"
+    [class.filled]="selectedOption.value"
+  >
+    <div class="custom-select__label">
+      {{ label }}
+    </div>
+
+    <div class="custom-select__selected-value">
+      {{ selectedOption.label }}
+    </div>
+
+    <div class="custom-select__dropdown" *ngIf="isDropdownOpen">
+      <div *ngFor="let option of options" (click)="selectOption(option)"
+        class="custom-select__option"
+        [class.selected]="option.value === selectedOption.value"
+      >
+        {{ option.label }}
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-select__error-message" *ngIf="hasError">
+    {{ errorMessage }}
+  </div>
+</div>

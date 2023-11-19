@@ -10,10 +10,12 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SectionHeroComponent } from './components/section-hero/section-hero.component';
 import { SectionWelcomeComponent } from './components/section-welcome/section-welcome.component';
 import { SectionStartComponent } from './components/section-start/section-start.component';
+import { SwiperComponent } from './components/swiper/swiper.component';
+import { SwiperDirective } from './directives/swiper.directive';
 
 import { register } from 'swiper/element/bundle';
-import { SwiperComponent } from './components/swiper/swiper.component';
 
+// SWIPER
 register();
 
 @NgModule({
@@ -32,6 +34,7 @@ register();
     SectionWelcomeComponent,
     SectionStartComponent,
     SwiperComponent,
+    SwiperDirective,
   ],
   providers: [],
   bootstrap: [AppComponent],

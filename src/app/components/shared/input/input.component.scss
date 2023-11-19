@@ -1,0 +1,87 @@
+@import '../../../../styles.scss';
+
+.custom-input-container {
+  position: relative;
+  width: 100%;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.068px;
+}
+
+.custom-input {
+  $h: 56px;
+  $borderWidth: 2px;
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: $borderWidth solid transparent;
+  position: relative;
+  border-radius: 4px;
+  background-color: var(--noda-white);
+  padding: 0 calc(1rem - $borderWidth);
+  height: 56px;
+
+  &__label {
+    transition: font-size 0.276s;
+    color: var(--noda-color-text-500);
+  }
+
+  &__input {
+    position: absolute;
+    color: var(--noda-color-text-900);
+  }
+
+  &.filled {
+    color: var(--noda-color-text-900);
+
+    .custom-input__input {
+      position: static;
+
+      &:autofill {
+        background-color: var(--noda-white);
+      }
+    }
+
+    .custom-input__label {
+      color: var(--noda-color-text-link-primary);
+      font-size: 12px;
+      line-height: 120%;
+    }
+  }
+}
+
+.custom-input-container .error {
+  border: 1px solid var(--noda-color-elements-rose);
+
+  &.filled .custom-input__label {
+    color: var(--noda-color-elements-rose);
+  }
+}
+
+.custom-input-container .disabled {
+  border: 1px solid var(--noda-color-bg-200);
+  background-color: var(--noda-color-bg-100);
+  cursor: no-drop;
+
+  &.filled .custom-input__label {
+    color: var(--noda-color-text-500);
+  }
+
+  &.filled .custom-input__selected-value {
+    color: var(--noda-color-text-700);
+  }
+}
+
+.custom-input__error-message {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 2px;
+  font-size: 14px;
+  line-height: 120%;
+  color: var(--noda-color-elements-rose);
+}

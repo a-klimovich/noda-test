@@ -1,0 +1,122 @@
+@import '../../../../styles.scss';
+
+.custom-select-container {
+  position: relative;
+  width: 100%;
+
+  font-family: "Archivo", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: -0.068px;
+}
+
+.custom-select {
+  $h: 56px;
+  $borderWidth: 2px;
+
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: $borderWidth solid transparent;
+  position: relative;
+  border-radius: 4px;
+  background-color: var(--noda-white);
+  padding: 0 calc(1rem - $borderWidth);
+  height: 56px;
+
+  &__label {
+    transition: font-size 0.276s;
+    color: var(--noda-color-text-500);
+  }
+
+  &__selected-value {
+    color: var(--noda-color-text-900);
+  }
+
+  &__dropdown {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: calc(100% + $borderWidth);
+    width: 100%;
+    max-width: 320px;
+    background-color: var(--noda-white);
+    overflow-y: auto;
+    z-index: 1;
+    max-height: 200px;
+
+    @include md {
+      max-width: initial;
+    }
+  }
+
+  &__option {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: $h;
+    padding: 0 1rem;
+    color: var(--day-text-icons-text-01);
+    box-shadow: -1px 0px 0px 0px #e7e8ea inset, 1px 0px 0px 0px #dddfe0 inset;
+
+    &.selected {
+      font-weight: 600;
+      color: var(--noda-color-text-900);
+    }
+
+    &:hover {
+      background: var(--noda-color-bg-100);
+    }
+  }
+
+  &.open {
+    border-color: var(--noda-color-elements-primary);
+
+    .custom-select__dropdown {
+      display: block;
+    }
+  }
+
+  &.filled {
+    color: var(--noda-color-text-900);
+
+    .custom-select__label {
+      color: var(--noda-color-text-link-primary);
+      font-size: 12px;
+      line-height: 120%;
+    }
+  }
+}
+
+.custom-select-container .error {
+  border: 1px solid var(--noda-color-elements-rose);
+
+  &.filled .custom-select__label {
+    color: var(--noda-color-elements-rose);
+  }
+}
+
+.custom-select-container .disabled {
+  border: 1px solid var(--noda-color-bg-200);
+  background-color: var(--noda-color-bg-100);
+  cursor: no-drop;
+
+  &.filled .custom-select__label {
+    color: var(--noda-color-text-500);
+  }
+
+  &.filled .custom-select__selected-value {
+    color: var(--noda-color-text-700);
+  }
+}
+
+.custom-select__error-message {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 2px;
+  font-size: 14px;
+  line-height: 120%;
+  color: var(--noda-color-elements-rose);
+}

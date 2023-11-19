@@ -17,16 +17,28 @@
 
       <div class="block__form">
         <form [formGroup]="form" class="form" action="#">
-          <div class="input-group">
-            <div>Select your business type</div>
+          <div class="input-group-wrapper">
+            <app-select
+              [label]="'Title'"
+              [options]="selectOptions"
+              [errorMessage]="'Text'">
+            </app-select>
 
-            <input type="email" placeholder="E-mail" required>
+            <app-input
+              [label]="'E-mail'"
+              [name]="'email'"
+              [errorMessage]="'Error text'"
+            ></app-input>
 
-            <input type="tel" placeholder="Phone number" required>
+            <app-input
+              [label]="'Phone number'"
+              [name]="'tel'"
+              [errorMessage]="'Error text'"
+            ></app-input>
           </div>
 
-          <app-custom-checkbox formControlName="myFormControl">
-            Checkbox label
+          <app-custom-checkbox>
+            I have Noda account
           </app-custom-checkbox>
 
           <button class="btn btn--primary">Start using Noda Payment links</button>
