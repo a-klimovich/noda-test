@@ -13,9 +13,4 @@ export class CustomCheckboxComponent {
   onChange(e: boolean) {
     this.checked = e;
   }
-
-  onFocus() {
-    console.log(12);
-    
-  }
 }
