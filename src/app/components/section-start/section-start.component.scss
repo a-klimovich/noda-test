@@ -1,4 +1,4 @@
-@import '../../../mixins.scss';
+@import "../../../mixins.scss";
 
 .section--start {
   padding: 100px 0;
@@ -7,27 +7,38 @@
 
   .block {
     $gap: 15px;
+    $contentPadding: 20px;
+
+    display: flex;
+    height: 400px;
+    color: var(--noda-white);
+    padding-left: 20px;
 
     @include lg {
-      $gap: 25px;
+      $gap: 40px;
+      margin-left: calc((100vw - 1200px) / 2);
     }
 
-    $contentSize: clamp(320px, 455px, 35vw);
-    $carouselSize: calc(100% + $gap + 40px - $contentSize);
-
-    display: grid;
-    grid-template-columns: $contentSize $carouselSize;
-    grid-template-rows: 400px;
     gap: $gap;
+    $contentSize: clamp(320px, calc(455px + $gap + $contentPadding), 50%);
+    
+    &__content {
+      max-width: $contentSize;
+      flex-shrink: 1;
+      box-sizing: border-box;
+    }
 
-    color: var(--noda-white);
+    &__carousel {
+      flex-grow: 1;
+      width: calc(100% - $contentSize + $gap);
+    }
 
     &__title {
       color: var(--noda-white);
     }
 
     &__text {
-      font-family: 'Archivo', sans-serif;
+      font-family: "Archivo", sans-serif;
       font-size: clamp(16px, 20px, 2vw);
       line-height: 140%;
 

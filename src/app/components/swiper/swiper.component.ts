@@ -58,6 +58,8 @@ export class SwiperComponent {
 
   swiperConfig: SwiperOptions = {
     slidesPerView: 'auto',
+    // centeredSlides: true,
+    // initialSlide: 4,
     breakpoints: {
       640: {
       },
