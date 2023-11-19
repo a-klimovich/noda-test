@@ -14,6 +14,7 @@ import { SwiperComponent } from './components/swiper/swiper.component';
 import { SwiperDirective } from './directives/swiper.directive';
 
 import { register } from 'swiper/element/bundle';
+import { MegamenuProductsComponent } from './components/header/megamenu-products/megamenu-products.component';
 
 // SWIPER
 register();
@@ -29,6 +30,7 @@ register();
   declarations: [
     AppComponent,
     HeaderComponent,
+    MegamenuProductsComponent,
     FooterComponent,
     SectionHeroComponent,
     SectionWelcomeComponent,

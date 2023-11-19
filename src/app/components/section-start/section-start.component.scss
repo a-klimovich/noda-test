@@ -11,8 +11,8 @@
 
     display: flex;
     height: 400px;
-    color: var(--noda-white);
     padding-left: 20px;
+    color: var(--noda-white);
 
     @include lg {
       $gap: 40px;
@@ -23,7 +23,6 @@
     $contentSize: clamp(320px, calc(455px + $gap + $contentPadding), 50%);
     
     &__content {
-      max-width: $contentSize;
       flex-shrink: 1;
       box-sizing: border-box;
     }

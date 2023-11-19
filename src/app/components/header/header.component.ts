@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss',
 })
 export class HeaderComponent {
+  isMenuOpen: boolean = false;
 
+  onMouseIn() {
+    this.isMenuOpen = true
+  }
+
+  onMouseInOverlay() {
+    this.isMenuOpen = false
+  }
 }
