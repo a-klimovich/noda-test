@@ -1,13 +1,24 @@
 <div class="custom-select-container">
-  <div class="custom-select" [class.open]="isDropdownOpen" [class.error]="hasError" [class.disabled]="disabled"
-    [class.filled]="selectedOption.value" (click)="toggleDropdown()">
+  <label
+    class="custom-select"
+    [class.error]="hasError"
+    [class.disabled]="disabled"
+    [class.filled]="isFocused || value.length > 0"
+    [class.active]="isFocused"
+  >
     <div class="custom-select__label">
       {{ label }}
     </div>
 
-    <div class="custom-select__selected-value">
-      {{ selectedOption.label }}
-    </div>
+    <input
+      [name]="name"
+      [value]="value"
+      (change)="onChange($event)"
+      [disabled]="disabled"
+      class="custom-select__input"
+      (focus)="onFocus()"
+      autocomplete="off"
+    >
 
     <svg class="custom-select__svg-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
       <mask id="mask0_1_14060" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
@@ -20,12 +31,12 @@
         <rect class="arrow" width="24" height="24" fill="currentColor" />
       </g>
     </svg>
+  </label>
 
-    <div class="custom-select__dropdown" *ngIf="isDropdownOpen">
-      <div *ngFor="let option of options" (click)="selectOption(option)" class="custom-select__option"
-        [class.selected]="option.value === selectedOption.value">
-        {{ option.label }}
-      </div>
+  <div class="custom-select__dropdown" *ngIf="isFocused">
+    <div *ngFor="let option of options" (click)="selectOption(option)" class="custom-select__option"
+      [class.selected]="option === value">
+      {{ option }}
     </div>
   </div>
 

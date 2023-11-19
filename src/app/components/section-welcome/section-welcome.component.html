@@ -24,11 +24,11 @@
       <div class="block__form">
         <form [formGroup]="form" class="form" action="#">
           <div class="input-group-wrapper">
-            <app-select
-              [label]="'Title'"
-              [options]="selectOptions"
-              [errorMessage]="'Text'">
-            </app-select>
+            <app-custom-select
+              [label]="'Select your business type'"
+              [name]="'business_type'"
+              [errorMessage]="'Error text'"
+            ></app-custom-select>
 
             <app-input
               [label]="'E-mail'"

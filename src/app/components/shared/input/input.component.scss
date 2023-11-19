@@ -76,6 +76,10 @@
     color: var(--noda-color-text-500);
   }
 
+  &.filled .custom-select__input {
+    color: var(--noda-color-text-700);
+  }
+
   &.filled .custom-input__selected-value {
     color: var(--noda-color-text-700);
   }

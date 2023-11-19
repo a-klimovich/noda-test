@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { InputComponent } from '../../components/shared/input/input.component'
 import { CustomCheckboxComponent } from '../../components/shared/checkbox/checkbox.component';
-import { SelectComponent } from '../../components/shared/select/select.component';
+import { CustomSelectComponent } from '../../components/shared/custom-select/custom-select.component';
 
 @NgModule({
   imports: [FormsModule, CommonModule],
-  declarations: [InputComponent, CustomCheckboxComponent, SelectComponent],
-  exports: [InputComponent, CustomCheckboxComponent, SelectComponent],
+  declarations: [InputComponent, CustomCheckboxComponent, CustomSelectComponent],
+  exports: [InputComponent, CustomCheckboxComponent, CustomSelectComponent],
 })
 export class FormControlsModule { }
