@@ -3,12 +3,28 @@
   align-items: center;
   cursor: pointer;
 
+  font-family: 'Archivo', sans-serif;
+  font-size: 17px;
+  line-height: 120%;
+  font-weight: 400;
+  letter-spacing: -0.068px;
+
   &:hover svg {
     color: var(--noda-color-additional-primary-light);
   }
 
-  &__text {
-    font-size: 16px;
+  &.small {
+
+  }
+
+  &.medium .custom-checkbox__text {
+    font-size: 14px;
+    line-height: 120%;
+  }
+
+  &.large .custom-checkbox__text {
+    font-size: 17px;
+    line-height: 120%;
   }
 
   &__square {

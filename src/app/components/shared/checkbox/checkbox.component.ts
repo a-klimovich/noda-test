@@ -7,6 +7,7 @@ import { Component, Input } from "@angular/core";
 })
 export class CustomCheckboxComponent {
   @Input() disabled: boolean = false;
+  @Input() size: "small" | "medium" | "large" = 'medium';
 
   checked: boolean = false;
 

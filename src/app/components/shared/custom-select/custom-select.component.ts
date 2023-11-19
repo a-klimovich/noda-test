@@ -10,8 +10,8 @@ export class CustomSelectComponent {
   @Input() label: string = 'Input';
   @Input() name: string = 'input';
   @Input() errorMessage: string = '';
-  @Input() disabled: boolean = true;
-  @Input() defaultValue: string = 'Text'
+  @Input() disabled: boolean = false;
+  @Input() defaultValue: string = ''
 
   value: string = this.defaultValue;
 
