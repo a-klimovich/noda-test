@@ -95,22 +95,20 @@ b {
 
   color: var(--noda-white);
   background-color: var(--noda-plum);
-  border: 2px solid var(--noda-plum);
+  border: 2px solid transparent;
   border-radius: 4px;
+  transition: all 0.33s;
 
   &:hover {
-    border-color: var(--noda-color-additional-primary-light);
     background-color: var(--noda-color-additional-primary-light);
     box-shadow: 0px 8px 16px 0px rgba(71, 4, 211, 0.08);
   }
 
   &:focus {
-    border-color: var(--noda-color-additional-primary-900);
     background-color: var(--noda-color-additional-primary-900);
   }
 
   &[disabled] {
-    border-color: var(--noda-color-elements-300);
     background-color: var(--noda-color-elements-300);
 
     &:hover {

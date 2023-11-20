@@ -38,6 +38,7 @@ export class SwiperComponent {
 
   swiperConfig: SwiperOptions = {
     slidesPerView: 'auto',
+    grabCursor: true,
     freeMode: {
       enabled: true,
       sticky: true,
