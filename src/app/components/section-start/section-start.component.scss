@@ -29,16 +29,19 @@
     }
 
     gap: $gap;
-    $contentSize: clamp(320px, calc(455px + $gap + $contentPadding), 50%);
     
     &__content {
-      box-sizing: border-box;
-      padding-left: 20px;
-      padding-right: 20px;
+      padding-left: $contentPadding;
+      padding-right: $contentPadding;
+      flex: 0 1 auto;
 
-      @include md {
+      @include rwd(540) {
+        flex: 0 1 360px;
+      }
+
+      @include rwd(900) {
         padding-right: 0;
-        flex-shrink: 1;
+        flex: 0 1 455px;
       }
     }
 
@@ -50,7 +53,7 @@
       font-family: "Archivo", sans-serif;
       font-size: clamp(16px, 20px, 2vw);
       line-height: 140%;
-
+      font-weight: 300;
       margin-top: 8px;
       margin-bottom: 40px;
     }
@@ -61,7 +64,7 @@
       @include md {
         height: auto;
         flex-grow: 1;
-        width: calc(100% - $contentSize + $gap);
+        width: calc(100% - 718px);
       }
     }
   }

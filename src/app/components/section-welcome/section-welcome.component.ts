@@ -11,24 +11,7 @@ export class SectionWelcomeComponent {
   inputOne = true;
   inputTwo = new FormControl(true);
 
-  selectOptions: SelectOption[] = [
-    {
-      label: 'Text',
-      value: '1'
-    },
-    {
-      label: 'Text 1',
-      value: '2'
-    },
-    {
-      label: 'Text 2',
-      value: '3'
-    },
-    {
-      label: 'Text 3',
-      value: '4'
-    },
-  ]
+  selectOptions: string[] = ['Text','Text 1','Text 2','Text 3','Text 4']
 
   form;
 

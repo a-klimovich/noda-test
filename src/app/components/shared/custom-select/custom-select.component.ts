@@ -12,13 +12,13 @@ export class CustomSelectComponent {
   @Input() errorMessage: string = '';
   @Input() disabled: boolean = false;
   @Input() defaultValue: string = ''
+  @Input() options: string[] = []
 
   value: string = this.defaultValue;
 
   isFocused: boolean = false;
   hasError: boolean = false;
 
-  options: string[] = ['Text','Text 1','Text 2','Text 3','Text 4']
 
   constructor(private elementRef: ElementRef) {}
 

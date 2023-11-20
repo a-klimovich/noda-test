@@ -4,6 +4,19 @@
   align-self: center;
   gap: 0.5em;
 
+  color: var(--noda-white);
+  font-family: 'Archivo', sans-serif;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 150%;
+  letter-spacing: -0.068px;
+  padding: 13px 24px;
+
+  border-radius: 4px;
+
+  background-color: var(--noda-plum);
+
   span {
     padding-top: 0.2em;
     font-size: xx-large;

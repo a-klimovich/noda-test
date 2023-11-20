@@ -6,13 +6,17 @@
       <div class="block__content">
         <p class="subtitle">Where we harness the power of AI to revolutionize the way creating payment pages</p>
 
-        <p class="text">
-          Our advanced platform combines the capabilities of <b>ChatGPT</b> for generating detailed text descriptions
-          and
-          <b>MidJourney</b> for selecting suitable images. With our innovative solution, you can effortlessly design and
-          customize
-          branded order pages for every transaction, complete with the following features
-        </p>
+        <div class="text">
+          <p>
+            Our advanced platform combines the capabilities of <b>ChatGPT</b> for generating detailed text descriptions
+            and <b>MidJourney</b> for selecting suitable images.
+          </p>
+
+          <p>
+            With our innovative solution, you can effortlessly design and
+            customize branded order pages for every transaction, complete with the following features
+          </p>
+        </div>
 
         <span class="content-decor">
           <svg width="94" height="84" viewBox="0 0 94 84" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,6 +32,7 @@
               [label]="'Select your business type'"
               [name]="'business_type'"
               [errorMessage]="'Error text'"
+              [options]="selectOptions"
             ></app-custom-select>
 
             <app-input
@@ -40,14 +45,15 @@
               [label]="'Phone number'"
               [name]="'tel'"
               [errorMessage]="'Error text'"
+              [disabled]="true"
             ></app-input>
           </div>
 
-          <app-custom-checkbox>
+          <app-custom-checkbox [size]="'large'">
             I have Noda account
           </app-custom-checkbox>
 
-          <button class="btn btn--primary">Start using Noda Payment links</button>
+          <button class="btn">Start using Noda Payment links</button>
         </form>
       </div>
     </div>

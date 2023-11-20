@@ -32,26 +32,6 @@ export class SwiperComponent {
       alt: 'some alt...',
       url: '../../../assets/images/slider-3-min.jpeg',
     },
-    {
-      alt: 'some alt...',
-      url: '../../../assets/images/slider-1-min.jpeg',
-    },
-    {
-      alt: 'some alt...',
-      url: '../../../assets/images/slider-3-min.jpeg',
-    },
-    {
-      alt: 'some alt...',
-      url: '../../../assets/images/slider-1-min.jpeg',
-    },
-    {
-      alt: 'some alt...',
-      url: '../../../assets/images/slider-3-min.jpeg',
-    },
-    {
-      alt: 'some alt...',
-      url: '../../../assets/images/slider-1-min.jpeg',
-    },
   ]
 
   index = 0;

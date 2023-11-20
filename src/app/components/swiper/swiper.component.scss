@@ -1,3 +1,5 @@
+@import '../../../mixins';
+
 .slide {
   all: revert-layer;
   width: auto;
@@ -6,11 +8,15 @@
 
   .image {
     display: flex;
-    width: 300px;
+    width: 250px;
     position: relative;
     overflow: hidden;
     border-radius: 10.326px;
     height: 100%;
+
+    @include rwd(900) {
+      width: 300px;
+    }
 
     &::after {
       content: '';

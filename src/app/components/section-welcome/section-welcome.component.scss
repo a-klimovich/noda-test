@@ -1,54 +1,80 @@
-@import '../../../mixins';
+@import "../../../mixins";
 
 .section--welcome {
   padding: 100px 0;
+  
 }
 
 .block {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
   margin-top: 32px;
 
+  @include md {
+    gap: 50px;
+    flex-direction: row;
+  }
+
   @include rwd(900) {
-    grid-template-columns: 1fr 1fr;
+    gap: 98px;
   }
 
   &__content {
     display: flex;
     flex-direction: column;
+    height: fit-content;
     position: relative;
-    gap: 24px;
+
+    @include md {
+      flex: 0 1 483px;
+    }
+    
 
     .subtitle {
       color: #1d2445;
-
       font-family: "Archivo", sans-serif;
-      font-size: clamp(16px, 24px, 2vw);
-      font-weight: 400;
+      font-size: clamp(16px, 24px, 2.3vw);
+      font-weight: 300;
       line-height: 140%;
     }
+
     .text {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.7em;
+
       font-family: "Inter", sans-serif;
-      font-size: clamp(14px, 18px, 2vw);
-      font-weight: 400;
+      font-size: clamp(14px, 18px, 1.7vw);
+      font-weight: 300;
       line-height: 140%;
+
+      padding: 24px 0;
+      padding-right: 15px;
+
     }
 
     .content-decor {
       display: none;
       margin-left: auto;
 
-      @include rwd(900) {
+      @include md {
         display: initial;
+        position: absolute;
+        top: 100%;
+        left: calc(100% - 35px);
       }
     }
   }
 
   &__form {
-    padding: 40px;
+    padding: clamp(20px, 40px, 3.3vw);
     border-radius: 12px;
-    background: rgba(231, 234, 243, 0.50);
+    background: rgba(231, 234, 243, 0.5);
+
+    @include md {
+      flex: 0 1 556px;
+    }
 
     .form {
       display: flex;
@@ -76,15 +102,6 @@
         &::placeholder {
           color: #a3a7bd;
         }
-      }
-
-      button {
-        padding: 12px 24px;
-
-        font-size: 17px;
-        line-height: 120%;
-        letter-spacing: -0.068px;
-        font-weight: 700;
       }
     }
   }
