@@ -10,7 +10,7 @@
 
   .block {
     $gap: 15px;
-    $contentPadding: 20px;
+    $contentPadding: 30px;
 
     display: flex;
     flex-direction: column;
@@ -25,7 +25,7 @@
 
     @include lg {
       $gap: 40px;
-      margin-left: calc((100vw - 1200px) / 2);
+      margin-left: calc((100vw - 1140px) / 2);
     }
 
     gap: $gap;
@@ -35,7 +35,7 @@
       padding-right: $contentPadding;
       flex: 0 1 auto;
 
-      @include rwd(540) {
+      @include md {
         flex: 0 1 360px;
       }
 

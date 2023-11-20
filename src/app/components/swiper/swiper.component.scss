@@ -8,14 +8,15 @@
 
   .image {
     display: flex;
-    width: 250px;
+    max-width: calc(100% - 30px);
     position: relative;
     overflow: hidden;
     border-radius: 10.326px;
     height: 100%;
 
-    @include rwd(900) {
+    @include md {
       width: 300px;
+      max-width: 100%;
     }
 
     &::after {
